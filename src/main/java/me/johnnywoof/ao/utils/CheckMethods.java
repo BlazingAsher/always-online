@@ -46,7 +46,7 @@ public class CheckMethods{
 		JsonArray jsonResponse = new JsonParser().parse(serverResponse).getAsJsonArray();
 		for(int i = 0; i < jsonResponse.size(); i++){
 			JsonObject status = jsonResponse.get(i).getAsJsonObject();
-			if(status.get("sessionserver.mojang.com") != null){ return !"red".equals(status.get("sessionserver.mojang.com").getAsString()); }
+			if(status.get("session.minecraft.net") != null){ return !"red".equals(status.get("session.minecraft.net").getAsString()); }
 		}
 		return true;
 	}
